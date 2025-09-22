@@ -23,3 +23,9 @@ const app = new Elysia({ adapter: node() })
             data: body
         }
     })
+    .delete('/user/:id', ({params}) =>{
+        console.log('Usuario eliminado', params.id)
+        return{
+            message: `Usuario con el id ${params.id} eliminado`
+        }
+    })
