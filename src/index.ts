@@ -15,4 +15,11 @@ const app = new Elysia({ adapter: node() })
             data: body
         }
     })
-    
+    .put('/user/:id', ({params, body}) =>{
+        console.log('Actualizando el usuario: ', params.id)
+        console.log('Con los datos: ', body)
+        return {
+            message: `Usuario ${params.id} actualizado`,
+            data: body
+        }
+    })
